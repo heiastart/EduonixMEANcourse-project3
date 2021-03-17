@@ -1,3 +1,6 @@
+# Ignoring the VS Code settings directory
+.vscode/
+
 # Logs
 logs
 *.log
