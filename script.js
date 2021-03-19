@@ -12,6 +12,8 @@ function resetCells() {
   cells.forEach(element => {
     element.innerText = '';
   })
+
+  count = 0;
 }
 
 /* // Or, with getElementsByTagName(td);
