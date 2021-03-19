@@ -11,26 +11,26 @@
   <body>
     <h1>My Tic-Tac-Toe Game</h1>
     <hr>
-    <label for="">The winner is: </label>
-    <div id="winnerIs"></div>
+    <h2>The winner is: </h2>
+    <h3 id="winnerIs"></h3>
 
     <!-- The game board using a 3x3 table -->
     <div class="flex">
       <table id="tttTable">
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="cell_1-1" onclick="cellWasClicked(this.id)"></td>
+          <td id="cell_1-2" onclick="cellWasClicked(this.id)"></td>
+          <td id="cell_1-3" onclick="cellWasClicked(this.id)"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="cell_2-1" onclick="cellWasClicked(this.id)"></td>
+          <td id="cell_2-2" onclick="cellWasClicked(this.id)"></td>
+          <td id="cell_2-3" onclick="cellWasClicked(this.id)"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="cell_3-1" onclick="cellWasClicked(this.id)"></td>
+          <td id="cell_3-2" onclick="cellWasClicked(this.id)"></td>
+          <td id="cell_3-3" onclick="cellWasClicked(this.id)"></td>
         </tr>
       </table>
     </div>
