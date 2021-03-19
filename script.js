@@ -141,6 +141,8 @@ function checkWinner() {
 //======================================
 function cellWasClicked(id) {
   count++;
+  let isDraw = false;
+
   if (count % 2 != 0) {
     document.getElementById(id).innerText = player1;
   }
@@ -148,5 +150,22 @@ function cellWasClicked(id) {
     document.getElementById(id).innerText = player2;
   }
   checkWinner();
+
+  // Handling a draw situation 
+  let cells = document.querySelectorAll('td');
+
+  if ((cells[0].innerText === player1 || cells[0].innerText === player2) &&
+      (cells[1].innerText === player1 || cells[1].innerText === player2) &&
+      (cells[2].innerText === player1 || cells[2].innerText === player2) &&
+      (cells[3].innerText === player1 || cells[3].innerText === player2) &&
+      (cells[4].innerText === player1 || cells[4].innerText === player2) &&
+      (cells[5].innerText === player1 || cells[5].innerText === player2) &&
+      (cells[6].innerText === player1 || cells[6].innerText === player2) &&
+      (cells[7].innerText === player1 || cells[7].innerText === player2) &&
+      (cells[8].innerText === player1 || cells[8].innerText === player2)
+      ) {
+    document.getElementById('winnerIs').innerText = "It's a draw!!";
+    resetCells();
+  }
 }
 
